@@ -1,0 +1,17 @@
+[Unit]
+Description=Telegram Server Monitor Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/telegram-server-monitor
+Environment="PYTHONUNBUFFERED=1"
+ExecStart=/opt/telegram-server-monitor/.venv/bin/python /opt/telegram-server-monitor/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+.venv/
+.env
+aow_subscribers.txt
+__pycache__/
+*.pyc
