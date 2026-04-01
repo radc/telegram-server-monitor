@@ -4,6 +4,8 @@ echo "Deleting/Creating Service Folder"
 sudo rm -rf /opt/telegram-server-monitor
 sudo mkdir -p /opt/telegram-server-monitor
 
+touch aow_subscribers.txt
+
 echo "Copying Files"
 sudo cp * /opt/telegram-server-monitor/
 sudo cp .env /opt/telegram-server-monitor/.env
